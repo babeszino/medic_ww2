@@ -1,9 +1,9 @@
 extends CharacterBody2D
 
+var speed = 300.0
+var target_position = position
 
-const SPEED = 150.0
-
-var movement_lock = false
+#var movement_lock = false
 
 var blood = 100
 var mental_health = 100
@@ -17,24 +17,23 @@ var right_leg = {'flesh': 100, 'bone': 0, 'wound': false, 'attached': false}
 
 
 func _physics_process(delta):
-	
-	velocity = Vector2.ZERO
-	if Input.is_action_pressed("go_right"):
-		velocity.x += 1
-	if Input.is_action_pressed("go_left"):
-		velocity.x -= 1
-	if Input.is_action_pressed("go_down"):
-		velocity.y += 1
-	if Input.is_action_pressed("go_up"):
-		velocity.y -= 1
+	var direction = target_position - position
 
+	if direction.length() > speed * delta:
+		direction = direction.normalized() * speed
+	else:
+		direction = target_position - position
 
-	if velocity.length() > 0:
-		velocity = velocity.normalized() * SPEED
+	position += direction * delta
 
-	position += velocity * delta
-	move_and_slide()
+	print("Direction: ", direction)
+
 
 func start(pos):
 	position = pos
 	#$CollisionShape2D.disabled = false
+
+func _unhandled_input(event):
+	if event is InputEventMouseButton and event.is_action_pressed("go_to"):
+		target_position = event.position
+		print("Mouse clicked at: ", event.position)

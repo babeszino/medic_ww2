@@ -28,5 +28,3 @@ func  set_skeleton_visible(value):
 	skeleton_visible = value
 	$Health/Skeleton.visible = skeleton_visible
 	set_process_input(skeleton_visible)
-
-	

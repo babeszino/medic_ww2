@@ -5,9 +5,9 @@ var pause = preload("res://pause_menu.tscn").instantiate()
 
 func _ready():
 	add_child(player)
-	player.start($Marker2D.position)
+	player.start(Vector2(576, 324))
 	$GameUI/PauseMenu.visible = false
-	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
+	#Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
 
 func _process(_delta):
 	pass

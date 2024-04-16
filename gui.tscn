@@ -1,7 +1,7 @@
 [gd_scene load_steps=15 format=3 uid="uid://rlblu6uymd8"]
 
 [ext_resource type="Script" path="res://gui.gd" id="1_iutv2"]
-[ext_resource type="Texture2D" uid="uid://nei0cyeeim8o" path="res://art/Injuries/Body.png" id="2_uu0y3"]
+[ext_resource type="Texture2D" uid="uid://nei0cyeeim8o" path="res://art/injuries/Body.png" id="2_uu0y3"]
 [ext_resource type="Texture2D" uid="uid://bno18aj3gywu3" path="res://art/injuries/HeadShot.png" id="3_lppew"]
 [ext_resource type="Texture2D" uid="uid://btba0kvnwfgxv" path="res://art/injuries/TorsoShot.png" id="4_0l3ld"]
 [ext_resource type="Texture2D" uid="uid://g6rtcmlwseqh" path="res://art/injuries/LeftArmShot.png" id="5_wg4n0"]
