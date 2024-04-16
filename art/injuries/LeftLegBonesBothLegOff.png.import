@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://ceutwa0fxgmws"
-path="res://.godot/imported/LeftLegBonesBothLegOff.png-9257d14d3d974e9d2cbd1d42838f9579.ctex"
+path="res://.godot/imported/LeftLegBonesBothLegOff.png-f9182e36726606556e9446ba1564640d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://art/injuries/LeftLegBonesBothLegOff.png"
-dest_files=["res://.godot/imported/LeftLegBonesBothLegOff.png-9257d14d3d974e9d2cbd1d42838f9579.ctex"]
+source_file="res://art/Injuries/LeftLegBonesBothLegOff.png"
+dest_files=["res://.godot/imported/LeftLegBonesBothLegOff.png-f9182e36726606556e9446ba1564640d.ctex"]
 
 [params]
 

@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://g6rtcmlwseqh"
-path="res://.godot/imported/LeftArmShot.png-aa4dbaf520a4d88d1ec04efd8499a1f0.ctex"
+path="res://.godot/imported/LeftArmShot.png-5bd6b45cbdc728f29d06fd19ae9cfa9c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://art/injuries/LeftArmShot.png"
-dest_files=["res://.godot/imported/LeftArmShot.png-aa4dbaf520a4d88d1ec04efd8499a1f0.ctex"]
+source_file="res://art/Injuries/LeftArmShot.png"
+dest_files=["res://.godot/imported/LeftArmShot.png-5bd6b45cbdc728f29d06fd19ae9cfa9c.ctex"]
 
 [params]
 
