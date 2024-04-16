@@ -1,13 +1,19 @@
-[gd_scene load_steps=9 format=3 uid="uid://rlblu6uymd8"]
+[gd_scene load_steps=15 format=3 uid="uid://rlblu6uymd8"]
 
 [ext_resource type="Script" path="res://gui.gd" id="1_iutv2"]
-[ext_resource type="Texture2D" uid="uid://nei0cyeeim8o" path="res://art/Body.png" id="2_jxdpv"]
-[ext_resource type="Texture2D" uid="uid://sbtsk0desvd1" path="res://art/Skull.png" id="3_5imy2"]
-[ext_resource type="Texture2D" uid="uid://dxqw8trg2a2em" path="res://art/TorsoBones.png" id="4_3u3hm"]
-[ext_resource type="Texture2D" uid="uid://bhr021ogy40x5" path="res://art/LeftArmBones.png" id="5_qgmf8"]
-[ext_resource type="Texture2D" uid="uid://8m2pyo4ym40u" path="res://art/RightArmBones.png" id="6_k56wm"]
-[ext_resource type="Texture2D" uid="uid://xcia0173obdd" path="res://art/LeftLegBones.png" id="7_1ee5p"]
-[ext_resource type="Texture2D" uid="uid://c86xutra4a5te" path="res://art/RightLegBones.png" id="8_70fl6"]
+[ext_resource type="Texture2D" uid="uid://nei0cyeeim8o" path="res://art/Injuries/Body.png" id="2_uu0y3"]
+[ext_resource type="Texture2D" uid="uid://bno18aj3gywu3" path="res://art/injuries/HeadShot.png" id="3_lppew"]
+[ext_resource type="Texture2D" uid="uid://btba0kvnwfgxv" path="res://art/injuries/TorsoShot.png" id="4_0l3ld"]
+[ext_resource type="Texture2D" uid="uid://g6rtcmlwseqh" path="res://art/injuries/LeftArmShot.png" id="5_wg4n0"]
+[ext_resource type="Texture2D" uid="uid://bre7yy8x2jipv" path="res://art/injuries/RightArmShot.png" id="6_rf6gq"]
+[ext_resource type="Texture2D" uid="uid://6eyom43nx05w" path="res://art/injuries/LeftLegShot.png" id="7_bklf4"]
+[ext_resource type="Texture2D" uid="uid://dpqefhdlqso2x" path="res://art/injuries/RightLegShot.png" id="8_xveko"]
+[ext_resource type="Texture2D" uid="uid://sbtsk0desvd1" path="res://art/injuries/Skull.png" id="9_05dqn"]
+[ext_resource type="Texture2D" uid="uid://dxqw8trg2a2em" path="res://art/injuries/TorsoBones.png" id="10_atw2k"]
+[ext_resource type="Texture2D" uid="uid://bhr021ogy40x5" path="res://art/injuries/LeftArmBones.png" id="11_oln17"]
+[ext_resource type="Texture2D" uid="uid://8m2pyo4ym40u" path="res://art/injuries/RightArmBones.png" id="12_xpvnt"]
+[ext_resource type="Texture2D" uid="uid://xcia0173obdd" path="res://art/injuries/LeftLegBones.png" id="13_kvboy"]
+[ext_resource type="Texture2D" uid="uid://c86xutra4a5te" path="res://art/injuries/RightLegBones.png" id="14_21r2d"]
 
 [node name="GUI" type="Control"]
 layout_mode = 3
@@ -48,37 +54,43 @@ offset_right = 112.0
 offset_bottom = 136.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("2_jxdpv")
+texture = ExtResource("2_uu0y3")
 
 [node name="Head" type="TextureRect" parent="Health/Body"]
 layout_mode = 0
 offset_right = 40.0
 offset_bottom = 40.0
+texture = ExtResource("3_lppew")
 
 [node name="Torso" type="TextureRect" parent="Health/Body"]
 layout_mode = 0
 offset_right = 40.0
 offset_bottom = 40.0
+texture = ExtResource("4_0l3ld")
 
 [node name="LeftArm" type="TextureRect" parent="Health/Body"]
 layout_mode = 0
 offset_right = 40.0
 offset_bottom = 40.0
+texture = ExtResource("5_wg4n0")
 
 [node name="RightArm" type="TextureRect" parent="Health/Body"]
 layout_mode = 0
 offset_right = 40.0
 offset_bottom = 40.0
+texture = ExtResource("6_rf6gq")
 
 [node name="LeftLeg" type="TextureRect" parent="Health/Body"]
 layout_mode = 0
 offset_right = 40.0
 offset_bottom = 40.0
+texture = ExtResource("7_bklf4")
 
 [node name="RightLeg" type="TextureRect" parent="Health/Body"]
 layout_mode = 0
 offset_right = 40.0
 offset_bottom = 40.0
+texture = ExtResource("8_xveko")
 
 [node name="Skeleton" type="Control" parent="Health"]
 texture_filter = 1
@@ -103,7 +115,7 @@ offset_right = 112.0
 offset_bottom = 136.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("3_5imy2")
+texture = ExtResource("9_05dqn")
 
 [node name="Torso" type="TextureRect" parent="Health/Skeleton"]
 layout_mode = 1
@@ -118,7 +130,7 @@ offset_right = 112.0
 offset_bottom = 136.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("4_3u3hm")
+texture = ExtResource("10_atw2k")
 
 [node name="LeftArm" type="TextureRect" parent="Health/Skeleton"]
 layout_mode = 1
@@ -133,7 +145,7 @@ offset_right = 112.0
 offset_bottom = 136.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("5_qgmf8")
+texture = ExtResource("11_oln17")
 
 [node name="RightArm" type="TextureRect" parent="Health/Skeleton"]
 layout_mode = 1
@@ -148,7 +160,7 @@ offset_right = 112.0
 offset_bottom = 136.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("6_k56wm")
+texture = ExtResource("12_xpvnt")
 
 [node name="LeftLeg" type="TextureRect" parent="Health/Skeleton"]
 layout_mode = 1
@@ -163,7 +175,7 @@ offset_right = 112.0
 offset_bottom = 136.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("7_1ee5p")
+texture = ExtResource("13_kvboy")
 
 [node name="RightLeg" type="TextureRect" parent="Health/Skeleton"]
 layout_mode = 1
@@ -178,7 +190,7 @@ offset_right = 112.0
 offset_bottom = 136.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("8_70fl6")
+texture = ExtResource("14_21r2d")
 
 [node name="HealthConcerns" type="VBoxContainer" parent="."]
 layout_mode = 0
