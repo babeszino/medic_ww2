@@ -8,16 +8,16 @@ var movement_lock = false
 var blood = 100
 var mental_health = 100
 var helmet_is_on = true
-var head = {'flesh': 100, 'bone': 100, 'wound': false}
-var torso = {'flesh': 100, 'bone': 100, 'wound': false}
-var left_arm = {'flesh': 100, 'bone': 100, 'wound': false}
-var right_arm = {'flesh': 100, 'bone': 100, 'wound': false}
-var left_leg = {'flesh': 100, 'bone': 100, 'wound': false}
-var right_leg = {'flesh': 100, 'bone': 100, 'wound': false}
+var head = {'flesh': 100, 'bone': 0, 'wound': false, 'attached': true}
+var torso = {'flesh': 100, 'bone': 0, 'wound': false, 'attached': true}
+var left_arm = {'flesh': 100, 'bone': 0, 'wound': false, 'attached': true}
+var right_arm = {'flesh': 100, 'bone': 0, 'wound': false, 'attached': true}
+var left_leg = {'flesh': 100, 'bone': 0, 'wound': false, 'attached': true}
+var right_leg = {'flesh': 100, 'bone': 0, 'wound': false, 'attached': false}
 
 
 func _physics_process(delta):
-
+	
 	velocity = Vector2.ZERO
 	if Input.is_action_pressed("go_right"):
 		velocity.x += 1

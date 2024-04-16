@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://xcia0173obdd"
-path="res://.godot/imported/LeftLegBones.png-ca7120f30c290fa0ec3d532032bffc77.ctex"
+uid="uid://ceutwa0fxgmws"
+path="res://.godot/imported/LeftLegBonesBothLegOff.png-9257d14d3d974e9d2cbd1d42838f9579.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://art/LeftLegBones.png"
-dest_files=["res://.godot/imported/LeftLegBones.png-ca7120f30c290fa0ec3d532032bffc77.ctex"]
+source_file="res://art/injuries/LeftLegBonesBothLegOff.png"
+dest_files=["res://.godot/imported/LeftLegBonesBothLegOff.png-9257d14d3d974e9d2cbd1d42838f9579.ctex"]
 
 [params]
 
