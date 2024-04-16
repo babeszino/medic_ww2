@@ -1,0 +1,257 @@
+[gd_scene load_steps=9 format=3 uid="uid://rlblu6uymd8"]
+
+[ext_resource type="Script" path="res://gui.gd" id="1_iutv2"]
+[ext_resource type="Texture2D" uid="uid://nei0cyeeim8o" path="res://art/Body.png" id="2_jxdpv"]
+[ext_resource type="Texture2D" uid="uid://sbtsk0desvd1" path="res://art/Skull.png" id="3_5imy2"]
+[ext_resource type="Texture2D" uid="uid://dxqw8trg2a2em" path="res://art/TorsoBones.png" id="4_3u3hm"]
+[ext_resource type="Texture2D" uid="uid://bhr021ogy40x5" path="res://art/LeftArmBones.png" id="5_qgmf8"]
+[ext_resource type="Texture2D" uid="uid://8m2pyo4ym40u" path="res://art/RightArmBones.png" id="6_k56wm"]
+[ext_resource type="Texture2D" uid="uid://xcia0173obdd" path="res://art/LeftLegBones.png" id="7_1ee5p"]
+[ext_resource type="Texture2D" uid="uid://c86xutra4a5te" path="res://art/RightLegBones.png" id="8_70fl6"]
+
+[node name="GUI" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_iutv2")
+
+[node name="HealthStatus" type="Label" parent="."]
+layout_mode = 2
+offset_left = 8.0
+offset_right = 101.0
+offset_bottom = 26.0
+text = "Health: Fine"
+
+[node name="Health" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 0
+offset_left = -48.0
+offset_top = 40.0
+offset_right = 208.0
+offset_bottom = 330.0
+scale = Vector2(0.8, 0.8)
+
+[node name="Body" type="TextureRect" parent="Health"]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -112.0
+offset_top = -136.0
+offset_right = 112.0
+offset_bottom = 136.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_jxdpv")
+
+[node name="Head" type="TextureRect" parent="Health/Body"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Torso" type="TextureRect" parent="Health/Body"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="LeftArm" type="TextureRect" parent="Health/Body"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="RightArm" type="TextureRect" parent="Health/Body"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="LeftLeg" type="TextureRect" parent="Health/Body"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="RightLeg" type="TextureRect" parent="Health/Body"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Skeleton" type="Control" parent="Health"]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 13
+anchor_left = 0.5
+anchor_right = 0.5
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Head" type="TextureRect" parent="Health/Skeleton"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -112.0
+offset_top = -136.0
+offset_right = 112.0
+offset_bottom = 136.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_5imy2")
+
+[node name="Torso" type="TextureRect" parent="Health/Skeleton"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -112.0
+offset_top = -136.0
+offset_right = 112.0
+offset_bottom = 136.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("4_3u3hm")
+
+[node name="LeftArm" type="TextureRect" parent="Health/Skeleton"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -112.0
+offset_top = -136.0
+offset_right = 112.0
+offset_bottom = 136.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("5_qgmf8")
+
+[node name="RightArm" type="TextureRect" parent="Health/Skeleton"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -112.0
+offset_top = -136.0
+offset_right = 112.0
+offset_bottom = 136.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("6_k56wm")
+
+[node name="LeftLeg" type="TextureRect" parent="Health/Skeleton"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -112.0
+offset_top = -136.0
+offset_right = 112.0
+offset_bottom = 136.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("7_1ee5p")
+
+[node name="RightLeg" type="TextureRect" parent="Health/Skeleton"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -112.0
+offset_top = -136.0
+offset_right = 112.0
+offset_bottom = 136.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("8_70fl6")
+
+[node name="HealthConcerns" type="VBoxContainer" parent="."]
+layout_mode = 0
+offset_left = 112.0
+offset_top = 64.0
+offset_right = 256.0
+offset_bottom = 249.0
+
+[node name="Label" type="Label" parent="HealthConcerns"]
+layout_mode = 2
+
+[node name="Label2" type="Label" parent="HealthConcerns"]
+layout_mode = 2
+
+[node name="Label3" type="Label" parent="HealthConcerns"]
+layout_mode = 2
+
+[node name="Label4" type="Label" parent="HealthConcerns"]
+layout_mode = 2
+
+[node name="Label5" type="Label" parent="HealthConcerns"]
+layout_mode = 2
+
+[node name="Label6" type="Label" parent="HealthConcerns"]
+layout_mode = 2
+
+[node name="Label7" type="Label" parent="HealthConcerns"]
+layout_mode = 2
+
+[node name="Mental" type="ColorRect" parent="."]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 40.0
+offset_right = 112.0
+offset_bottom = 48.0
+color = Color(0.239216, 0.239216, 0.239216, 1)
+
+[node name="MentalLevel" type="ColorRect" parent="Mental"]
+layout_mode = 1
+anchors_preset = 9
+anchor_bottom = 1.0
+offset_right = 30.0
+grow_vertical = 2
+color = Color(0.243137, 0.780392, 0.333333, 1)
+
+[node name="Blood" type="ColorRect" parent="."]
+layout_mode = 2
+offset_left = 8.0
+offset_top = 24.0
+offset_right = 112.0
+offset_bottom = 32.0
+color = Color(0.239216, 0.239216, 0.239216, 1)
+
+[node name="BloodLevel" type="ColorRect" parent="Blood"]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_top = -4.0
+offset_right = 40.0
+offset_bottom = 4.0
+grow_vertical = 2
+color = Color(0.792157, 0.137255, 0, 1)
+
+[node name="Inventory" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -300.0
+offset_top = -136.0
+offset_right = 300.0
+grow_horizontal = 2
+grow_vertical = 0

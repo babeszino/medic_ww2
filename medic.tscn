@@ -1,0 +1,14 @@
+[gd_scene load_steps=2 format=3 uid="uid://mlqqasl87482"]
+
+[ext_resource type="Script" path="res://medic.gd" id="1_yvbmd"]
+
+[node name="Medic" type="CharacterBody2D"]
+script = ExtResource("1_yvbmd")
+metadata/_edit_group_ = true
+
+[node name="Polygon2D" type="Polygon2D" parent="."]
+color = Color(1, 0.152941, 0.0235294, 1)
+polygon = PackedVector2Array(-16, -8, -16, 8, -8, 8, -8, 16, 8, 16, 8, 8, 16, 8, 16, -8, 8, -8, 8, -16, -8, -16, -8, -8)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(-8, -16, -8, -8, -16, -8, -16, 8, -8, 8, -8, 16, 8, 16, 8, 8, 16, 8, 16, -8, 8, -8, 8, -16)

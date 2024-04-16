@@ -1,0 +1,58 @@
+[gd_scene load_steps=4 format=3 uid="uid://bwmmg4lym6xfm"]
+
+[ext_resource type="Script" path="res://pause_menu.gd" id="1_k8cd3"]
+
+[sub_resource type="InputEventKey" id="InputEventKey_cww0i"]
+
+[sub_resource type="Shortcut" id="Shortcut_dcauh"]
+events = [SubResource("InputEventKey_cww0i")]
+
+[node name="PauseMenu" type="Control"]
+process_mode = 3
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_k8cd3")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.243137, 0.639216, 0.105882, 1)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+offset_left = 360.0
+offset_top = 128.0
+offset_right = 792.0
+offset_bottom = 508.0
+theme_override_constants/separation = 12
+
+[node name="Label" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 60
+text = "	GAME PAUSED"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Resume" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 10
+theme_override_font_sizes/font_size = 40
+shortcut = SubResource("Shortcut_dcauh")
+text = "Resume Game"
+
+[node name="Quit" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 2
+theme_override_font_sizes/font_size = 40
+text = "Quit Game"
+
+[connection signal="pressed" from="VBoxContainer/Resume" to="." method="_on_resume_pressed"]
+[connection signal="pressed" from="VBoxContainer/Quit" to="." method="_on_quit_pressed"]
