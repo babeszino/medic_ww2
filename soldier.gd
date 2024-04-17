@@ -12,5 +12,5 @@ var right_arm = {'flesh': 100, 'bone': 100, 'wound': false, 'attached': true}
 var left_leg = {'flesh': 100, 'bone': 100, 'wound': false, 'attached': true}
 var right_leg = {'flesh': 100, 'bone': 100, 'wound': false, 'attached': true}
 
-func _physics_process(delta):
+func _physics_process(_delta):
 	move_and_slide()
