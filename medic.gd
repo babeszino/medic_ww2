@@ -25,7 +25,7 @@ func _physics_process(delta):
 		direction = target_position - position
 
 	position += direction * delta
-
+	move_and_slide()
 
 func start(pos):
 	position = pos
@@ -36,6 +36,7 @@ func _unhandled_input(event):
 	if event is InputEventMouseButton and event.is_action("go_to"):
 		target_position = event.position
 		movement = !movement
+		print(movement)
 	
 	#Movement change: 
 	if event is InputEventMouseMotion and movement:

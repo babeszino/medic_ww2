@@ -1,8 +1,36 @@
-[gd_scene load_steps=4 format=3 uid="uid://doa48rstscb4q"]
+[gd_scene load_steps=7 format=3 uid="uid://doa48rstscb4q"]
 
 [ext_resource type="Script" path="res://game_1.gd" id="1_tb5wa"]
 [ext_resource type="PackedScene" uid="uid://bwmmg4lym6xfm" path="res://pause_menu.tscn" id="2_tnwf0"]
+[ext_resource type="Texture2D" uid="uid://d2c5m81kbhli8" path="res://art/map/medic_tilemap.png" id="2_vd8sy"]
 [ext_resource type="PackedScene" uid="uid://rlblu6uymd8" path="res://gui.tscn" id="3_s8qtb"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_4ifmi"]
+texture = ExtResource("2_vd8sy")
+texture_region_size = Vector2i(64, 64)
+1:0/0 = 0
+1:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+1:0/0/physics_layer_0/angular_velocity = 0.0
+1:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, 32, 32, 32, 32, 16, -32, 16)
+0:0/0 = 0
+0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:0/0/physics_layer_0/angular_velocity = 0.0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, 12, -32, 32, 32, 32, 32, 12)
+0:1/size_in_atlas = Vector2i(2, 1)
+0:1/0 = 0
+0:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:1/0/physics_layer_0/angular_velocity = 0.0
+0:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(60, 32, 60, 20, 60, 12, -4, 12, -64, 12, -64, 32, -64, 32, 20, 32)
+2:0/size_in_atlas = Vector2i(2, 2)
+2:0/0 = 0
+2:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+2:0/0/physics_layer_0/angular_velocity = 0.0
+2:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(72, 64, 24, 0, -12, 0, -44, 24, -44, 64)
+
+[sub_resource type="TileSet" id="TileSet_plxby"]
+tile_size = Vector2i(64, 64)
+physics_layer_0/collision_layer = 1
+sources/0 = SubResource("TileSetAtlasSource_4ifmi")
 
 [node name="Game1" type="Node2D"]
 script = ExtResource("1_tb5wa")
@@ -17,7 +45,16 @@ color = Color(0.882353, 0.85098, 0.627451, 1)
 [node name="Marker2D" type="Marker2D" parent="."]
 position = Vector2(1040, 568)
 
+[node name="MapElements" type="CanvasLayer" parent="."]
+
+[node name="TileMap" type="TileMap" parent="MapElements"]
+texture_filter = 1
+tile_set = SubResource("TileSet_plxby")
+format = 2
+layer_0/tile_data = PackedInt32Array(458762, 131072, 0, 524294, 131072, 0, 196617, 65536, 0, 196618, 65536, 0, 196619, 65536, 0, 196620, 65536, 0, 196621, 65536, 0, 196622, 65536, 0, 196623, 65536, 0, 196624, 131072, 0, 327682, 0, 1, 327683, 0, 1, 393230, 0, 0, 327695, 0, 1, 196614, 131072, 0)
+
 [node name="GameUI" type="CanvasLayer" parent="."]
+layer = 2
 
 [node name="GUI" parent="GameUI" instance=ExtResource("3_s8qtb")]
 
