@@ -7,12 +7,12 @@ func _ready():
 	add_child(player)
 	player.start(Vector2(576, 324))
 	$GameUI/PauseMenu.visible = false
-	#Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
 
 func _process(_delta):
 	pass
 	
 func _unhandled_input(event):
+	
 	#not when _unhandled_input when injured:
 	if event.is_action_pressed('health'):
 		if player.left_leg.get('attached') == false and player.right_leg.get('attached') == false:

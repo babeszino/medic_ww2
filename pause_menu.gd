@@ -12,10 +12,10 @@ func set_is_paused(value):
 	visible = is_paused
 	set_process_input(is_paused)
 	
-	if Input.mouse_mode == Input.MOUSE_MODE_VISIBLE:
-		Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
-	else:
-		Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
+	#if Input.mouse_mode == Input.MOUSE_MODE_VISIBLE:
+		#Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
+	#else:
+		#Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
 
 func _on_resume_pressed(): #if is_paused: ?
 	self.is_paused = false

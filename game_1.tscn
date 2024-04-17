@@ -11,6 +11,7 @@ script = ExtResource("1_tb5wa")
 offset_right = 1152.0
 offset_bottom = 648.0
 size_flags_vertical = 3
+mouse_filter = 2
 color = Color(0.882353, 0.85098, 0.627451, 1)
 
 [node name="Marker2D" type="Marker2D" parent="."]
