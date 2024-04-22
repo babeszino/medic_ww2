@@ -94,5 +94,6 @@ position = Vector2(331, 77)
 rotation = -0.253674
 
 [node name="SoldierSpawnTimer" type="Timer" parent="."]
+wait_time = 2.0
 
 [connection signal="timeout" from="SoldierSpawnTimer" to="." method="_on_soldier_spawn_timer_timeout"]

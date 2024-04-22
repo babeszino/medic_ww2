@@ -22,6 +22,7 @@ func _physics_process(delta):
 			queue_free()
 			
 	if position.x *signf(position.x) >=3000 or position.y *signf(position.y) >= 3000:
+		print('out of bounds')
 		queue_free()
 		
 func set_bullet_velocity(where: Vector2):
