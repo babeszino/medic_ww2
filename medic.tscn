@@ -2,7 +2,8 @@
 
 [ext_resource type="Script" path="res://medic.gd" id="1_yvbmd"]
 
-[node name="Medic" type="CharacterBody2D"]
+[node name="Medic" type="CharacterBody2D" groups=["player"]]
+collision_mask = 5
 script = ExtResource("1_yvbmd")
 metadata/_edit_group_ = true
 
@@ -12,3 +13,5 @@ polygon = PackedVector2Array(-16, -8, -16, 8, -8, 8, -8, 16, 8, 16, 8, 8, 16, 8,
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
 polygon = PackedVector2Array(-8, -16, -8, -8, -16, -8, -16, 8, -8, 8, -8, 16, 8, 16, 8, 8, 16, 8, 16, -8, 8, -8, 8, -16)
+
+[node name="Camera2D" type="Camera2D" parent="."]

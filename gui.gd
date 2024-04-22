@@ -7,9 +7,9 @@ var skeleton_visible: bool = false: set = set_skeleton_visible
 
 func _ready():
 	body_visible = false
-	var body_shots = $Health/Body.get_children()
-	for i in body_shots:
-		i.visible = false
+	#var body_shots = $Health/Body.get_children()
+	#for i in body_shots:
+		#i.visible = false
 	
 func _unhandled_input(event):
 	if event.is_action_pressed('health'):

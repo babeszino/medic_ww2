@@ -1,9 +1,13 @@
-[gd_scene load_steps=2 format=3 uid="uid://e7hcq5mkxnk2"]
+[gd_scene load_steps=3 format=3 uid="uid://e7hcq5mkxnk2"]
 
 [ext_resource type="Script" path="res://soldier.gd" id="1_ejua7"]
+[ext_resource type="PackedScene" uid="uid://cr478q12g04v" path="res://bullet.tscn" id="2_07tn2"]
 
-[node name="Soldier" type="CharacterBody2D"]
+[node name="Soldier" type="CharacterBody2D" groups=["soldiers"]]
+collision_layer = 2
+collision_mask = 4
 script = ExtResource("1_ejua7")
+bullets = ExtResource("2_07tn2")
 
 [node name="Polygon2D" type="Polygon2D" parent="."]
 color = Color(0.0470588, 0.419608, 0.227451, 1)
@@ -11,3 +15,11 @@ polygon = PackedVector2Array(0, -16, -8, 0, -16, 0, 0, 16, 16, 0, 8, 0)
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
 polygon = PackedVector2Array(0, -16, -8, 0, -16, 0, 0, 16, 16, 0, 8, 0)
+
+[node name="DirChange" type="Timer" parent="."]
+wait_time = 3.0
+
+[node name="CHANGE_TIMER_FOR_ENEMY_DETECTION" type="Timer" parent="."]
+
+[connection signal="timeout" from="DirChange" to="." method="_move"]
+[connection signal="timeout" from="CHANGE_TIMER_FOR_ENEMY_DETECTION" to="." method="_on_change_timer_for_enemy_detection_timeout"]
